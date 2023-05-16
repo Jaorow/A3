@@ -1,0 +1,93 @@
+main{
+    display: block
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    color: #fff !important;
+    background-color: #000 !important
+}
+
+.neon-text {
+    color: white;
+    text-shadow: 0 0 5px #00F934, 0 0 10px #00F934, 0 0 20px #00F934, 0 0 40px #00F934, 0 0 80px #00F934, 0 0 90px #00F934, 0 0 100px #00F934, 0 0 150px #00F934;
+    filter: blur(1px);
+}
+
+.neon-text-small {
+    color: #00F934;
+}
+
+.flicker-letter{
+    color: transparent;
+    text-shadow: none;
+}
+
+#main {
+    margin-left: 120px
+}
+
+.center {
+    text-align: center !important
+}
+
+.size-64 {
+    font-size: 64px !important
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: inherit;
+    text-align: center;
+}
+
+.button:hover {
+    color: #000 !important;
+    background-color: #ccc !important
+}
+
+.bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+}
+
+.sidebar {
+    width: 120px;
+    background: #222;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto;
+    height: 100%;
+    /* background-color: #000 !important; */
+    border-left: 0px; border-top: 0px; border-bottom: 0px;
+    /* border-style: solid; */
+    border-color: #00F934;
+}
+
+.bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.padding-large {
+    padding: 12px 24px !important
+}
+
+.container {
+    padding: 0.01em 16px
+}
