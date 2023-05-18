@@ -2,21 +2,27 @@
 <html>
 
 <head>
-	<title>Carbon Calculator</title>
+	<title>Carbon Easy!</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="style.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
 	<script src="script.js"></script>
 </head>
 
 <body onload="loaded()">
 
 	<!-- Icon Bar  -->
-	<nav class="sidebar bar-block">
+	<nav class="sidebar bar-block black-leaf-background">
+		<span class="neon-glow"></span>
 		<!-- image in top left corner -->
-		<img src="" alt="#tree" height=100 style="width:100%">
+		<img src="leaf.png" alt="#tree" height=100 style="width:100%">
+		
 		<a href="#home" class="bar-item button padding-large black neon-text-small">
 			<p>HOME</p>
 		</a>
@@ -29,15 +35,21 @@
 		<a href="#contact" class="bar-item button padding-large hover-black neon-text-small">
 			<p>CONTACT</p>
 		</a>
+		<a href="#" class="bar-item button padding-large hover-black neon-text-small" id="trigger-modal">Register</a>
 	</nav>
 
 	<!-- Content -->
 	<div class="padding-large" id="main">
 		<!-- Header/Home -->
 		<header class="center">
-			<h1 class="size-64 neon-text"> Carbon C<span id = "flicker" class = "flicker-letter">al</span>culator </h1>
-			<p>Little sentence here to say something.</p>
-			<img src="" alt="neon tree img" width="800" height="500">
+			<h1 class="size-64 neon-text"> Carb<span id = "flicker" class = "flicker-letter">o</span>n Easy!</h1>
+			<p>Your path to a better future.</p>
+			<div class="container">
+				<img src="plantpic.png" alt="neon tree img" class="blend-out" width="800" height="500">
+				<div class="overlay">
+					<button class="go-button">Quiz</button>
+				</div>
+			</div>
 		</header>
 
 
