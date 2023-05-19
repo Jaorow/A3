@@ -35,17 +35,28 @@
 		<a href="#contact" class="bar-item button padding-large hover-black neon-text-small">
 			<p>CONTACT</p>
 		</a>
-		<a href="#" class="bar-item button padding-large hover-black neon-text-small" id="trigger-modal">Register</a>
+		<a href="#register" class="bar-item button padding-large hover-black neon-text-small" id="trigger-modal" onclick="triggerReg()"">
+			<p>REGISTER</p>
+		</a>
 	</nav>
+
 
 	<!-- Content -->
 	<div class="padding-large" id="main">
 		<!-- Header/Home -->
+
+	<!-- popup -->
+		<div class="form-popup" id="form-ct">
+			<p style="color:white;">hello</p>
+		</div>
+
+
+	<!-- HERO -->
 		<header class="center">
 			<h1 class="size-64 neon-text"> Carb<span id = "flicker" class = "flicker-letter">o</span>n Easy!</h1>
 			<p>Your path to a better future.</p>
 			<div class="container">
-				<img src="plantpic.png" alt="neon tree img" class="blend-out" width="800" height="500">
+				<img src="plantpic.png" id="center-picture"alt="neon tree img" class="blend-out" width="800" height="500">
 				<div class="overlay">
 					<button class="go-button">Quiz</button>
 				</div>
@@ -55,5 +66,6 @@
 
 		<!-- END PAGE CONTENT -->
 	</div>
+</div>
 </body>
 </html>

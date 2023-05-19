@@ -1,10 +1,12 @@
-root{
+root {
     --main-green: #00F934;
 }
-main{
-    display: block
+
+main {
+    display: block;
 }
-body{
+
+body {
     font-family: 'Tilt Neon', cursive;
     color: #fff !important;
     background-color: #000 !important
@@ -21,7 +23,7 @@ body{
     color: #00F934;
 }
 
-.flicker-letter{
+.flicker-letter {
     color: transparent;
     text-shadow: none;
 }
@@ -75,11 +77,12 @@ body{
     /* box-shadow: 0 0 10px #00F934; */
     box-shadow: 10px -5px 10px -5px #00F934;
 }
+
 /* .black-leaf-background{
     background-image: url(black-leaves.png);
 } */
-  
-  
+
+
 
 .bar-item {
     width: 100%;
@@ -93,11 +96,10 @@ body{
 }
 
 .padding-large {
-    padding: 12px 24px !important
-}
-
-.container {
-    padding: 0.01em 16px
+    padding: 12px 24px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -108,17 +110,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
-  }
-  
-  .overlay {
-    left: 45% !important;
-    top: 225px !important;
+    position: relative;
+}
+
+.overlay {
     position: absolute;
     z-index: 2;
-  }
+}
 
-  
+
 
 .go-button {
     --glow-color: #00F934;
@@ -134,14 +134,15 @@ body{
     border-radius: 1em;
     outline: none;
     box-shadow: 0 0 1em .25em var(--glow-color),
-           0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
     text-shadow: 0 0 .5em var(--glow-color);
     /* position: relative; */
     transition: all 0.3s;
-   }
-   
-   .go-button::after {
+}
+
+.go-button::after {
+    background-color: var(--glow-spread-color);
     pointer-events: none;
     content: "";
     position: absolute;
@@ -149,22 +150,37 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--glow-spread-color);
     color: black;
     filter: blur(2em);
     opacity: .7;
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-   }
-   .go-button:hover {
+}
+
+.go-button:hover {
     color: black;
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
-           0 0 4em 2em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
-   }
-   
-   .go-button:active {
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.go-button:active {
     box-shadow: 0 0 0.6em .25em var(--glow-color),
-           0 0 2.5em 2em var(--glow-spread-color),
-           inset 0 0 .5em .25em var(--glow-color);
-   }
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* reg popup */
+
+.form-popup {
+    display: none;
+    background-color: black;
+    padding: 10px;
+    top: 180px;
+    position: fixed;
+    border-radius: 20px;
+    width: 520px;
+    height: 550px;
+    z-index: 9;
+    box-shadow: 0 0 10px #00F934;
+  }
