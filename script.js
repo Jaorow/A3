@@ -13,7 +13,7 @@ function loaded() {
     setTimeout(flickerNeon, 2000);
 
     // for creating reg form for testing
-    triggerReg();
+    // triggerReg();
 }
 
 
