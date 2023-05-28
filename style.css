@@ -58,8 +58,26 @@ body {
 }
 
 .button:hover {
-    color: #000 !important;
-    background-color: #ccc !important
+    text-shadow: 0 0 8px #00F934;
+    animation: pulse 3s infinite;
+}
+
+.button_location{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
 }
 
 .bar-block .bar-item {
@@ -83,23 +101,6 @@ body {
     background-color: transparent !important;
     /* box-shadow: 0 0 10px #00F934; */
     box-shadow: 10px -5px 10px -5px #00F934;
-}
-
-/* .black-leaf-background{
-    background-image: url(black-leaves.png);
-} */
-
-
-
-.bar-item {
-    width: 100%;
-    display: block;
-    padding: 8px 16px;
-    text-align: left;
-    border: none;
-    white-space: normal;
-    float: none;
-    outline: 0
 }
 
 .padding-large {
@@ -179,6 +180,17 @@ body {
 }
 
 /* reg popup */
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0.90);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 .form-popup {
     display: none;
@@ -191,6 +203,12 @@ body {
     height: 680px;
     z-index: 9;
     box-shadow: 0 0 20px #00F934;
+}
+
+.shake-it-off{
+    border: solid 1px red !important;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
 }
 
 .form-header{
@@ -215,7 +233,7 @@ body {
 .close-button:hover{
     /* color: #00F934; */
     text-shadow: 0 0 5px #00F934;
-    transform: scale(1.1);
+    transform: scale(1.2);
     animation: pulse 3s infinite;
 }
 

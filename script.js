@@ -5,6 +5,8 @@ function flickerNeon() {
 }
 
 function loaded() {
+    // this makes sure page isnt shown unitl loaded
+    document.getElementById("main-body").style.display = "block";
     // starts off
     setTimeout(flickerNeon, 1000);
     setTimeout(flickerNeon, 100);

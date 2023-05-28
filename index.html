@@ -8,21 +8,21 @@
 	<link href="style.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-	<link rel="preconnect" href="https://fonts.googleapis.com"> 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
 
 	<script src="script.js"></script>
 </head>
 
-<body onload="loaded()">
+<body id="main-body" onload="loaded()" style="display: none;">
 
 	<!-- Icon Bar  -->
 	<nav class="sidebar bar-block black-leaf-background">
 		<span class="neon-glow"></span>
 		<!-- image in top left corner -->
 		<img src="leaf.png" alt="#tree" height=100 style="width:100%">
-		
+
 		<a href="#home" class="bar-item button padding-large black neon-text-small">
 			<p>HOME</p>
 		</a>
@@ -35,99 +35,105 @@
 		<a href="#contact" class="bar-item button padding-large hover-black neon-text-small">
 			<p>CONTACT</p>
 		</a>
-		<a href="#register" class="bar-item button padding-large hover-black neon-text-small" id="trigger-modal" onclick="triggerReg()"">
+		<a href="#register" class="bar-item button padding-large hover-black neon-text-small" id="trigger-modal"
+			onclick="triggerReg()"">
 			<p>REGISTER</p>
 		</a>
 	</nav>
 
 
 	<!-- Content -->
-	<div class="padding-large" id="main">
-		<!-- Header/Home -->
+	<div class=" padding-large" id="main">
+			<!-- Header/Home -->
 
-	<!-- popup -->
-		<div class="form-popup" id="form-ct">
-			<form>
-				<h2 class="form-header">REGISTER</h2>
-				<span class="close-button" onclick="unTrigerReg()">&times;</span>
-				<div id="userInfo" class="new-popup-division">
-				  <!-- <h2>User Details</h2> -->
-					
-				  <div class="input-box">
-					  <input class="input" type="text" id="givenName" name="givenName" placeholder=" " />
-					  <div class="cut" style="width: 88px;"></div>
-					<label for="givenName" class="placeholder">Given Name:</label>
-				  </div>
+			<!-- popup -->
+			<div class="form-popup" id="form-ct">
+				<form>
+					<h2 class="form-header">REGISTER</h2>
+					<span class="close-button" onclick="unTrigerReg()">&times;</span>
+					<div id="userInfo" class="new-popup-division">
+						<!-- <h2>User Details</h2> -->
 
-				  <div class="input-box">
-					  <input type="text" id="surname" class="input" name="surname" placeholder=" " />
-					  <div class="cut"></div>
-					  <label for="surname" class="placeholder">Surname:</label>
-				  </div>
+						<div class="input-box">
+							<input required class="input" type="text" id="givenName" name="givenName" placeholder=" " />
+							<div class="cut" style="width: 88px;"></div>
+							<label for="givenName" class="placeholder">Given Name:</label>
+						</div>
 
-				  <div class="input-box">
-					  <input type="text" class="input" id="username" name="username" placeholder=" " />
-					  <div class="cut"></div>
-					  <label for="username" class="placeholder">Username:</label>
-				  </div>
+						<div class="input-box">
+							<input required type="text" id="surname" class="input" name="surname" placeholder=" " />
+							<div class="cut"></div>
+							<label for="surname" class="placeholder">Surname:</label>
+						</div>
 
-				  <div class="input-box" >
-					  <input type="password" class="input" id="password" name="password" placeholder=" " />
-					  <div class="cut"></div>
-					  <label for="password" class="placeholder">Password:</label>
-				  </div>
-				</div>
-			  
+						<div class="input-box">
+							<input required type="text" class="input" id="username" name="username" placeholder=" " />
+							<div class="cut"></div>
+							<label for="username" class="placeholder">Username:</label>
+						</div>
 
-				<div id="addressInfo" class="new-popup-division">
-				  <!-- <h2>Addresses</h2> -->
-				  <div class="input-box">
-					<input type="text" id="homeAddress" class="input" name="homeAddress" placeholder=" " />
-					<div class="cut" style="width: 100px;"></div>
-					<label for="homeAddress" class="placeholder">Home Address:</label>
-				  </div>
-
-				  <div class="input-box">
-					  <input type="text" id="workAddress" class="input" name="workAddress" placeholder=" " />
-					  <div class="cut" style="width: 100px;"></div>
-					<label for="workAddress" class="placeholder">Work Address:</label>
-				  </div>
-				</div>
-			  
-
-				<div id="contactInfo" class="new-popup-division">
-				  <!-- <h2>Contacts</h2> -->
-				  <div class="input-box">
-					<input type="text" id="mobileNumber" class="input" name="mobileNumber" placeholder=" " />
-					<div class="cut" style="width: 105px;"></div>
-					<label for="mobileNumber" class="placeholder">Mobile Number:</label>
-				  </div>
-				
-				  <div class="input-box">
-					<input type="text" id="email" class="input" name="email" placeholder=" " />
-					<div class="cut" style="width: 55px;"></div>
-					<label for="email" class="placeholder">Email:</label>
-				  </div>
-				</div>
-				<div class="submit-box">
-					<button class="go-button2" type="submit" >Submit</button>
-				</div>
-			  </form>
-			  
-		</div>
+						<div class="input-box">
+							<input required type="password" class="input" id="password" name="password"
+								placeholder=" " />
+							<div class="cut"></div>
+							<label for="password" class="placeholder">Password:</label>
+						</div>
+					</div>
 
 
+					<div id="addressInfo" class="new-popup-division">
+						<!-- <h2>Addresses</h2> -->
+						<div class="input-box">
+							<input required type="text" id="homeAddress" class="input" name="homeAddress"
+								placeholder=" " />
+							<div class="cut" style="width: 100px;"></div>
+							<label for="homeAddress" class="placeholder">Home Address:</label>
+						</div>
+
+						<div class="input-box">
+							<input required type="text" id="workAddress" class="input" name="workAddress"
+								placeholder=" " />
+							<div class="cut" style="width: 100px;"></div>
+							<label for="workAddress" class="placeholder">Work Address:</label>
+						</div>
+					</div>
 
 
-	<!-- HERO -->
-		<header class="center">
-			<h1 class="size-64 neon-text"> Carb<span id = "flicker" class = "flicker-letter">o</span>n Easy!</h1>
-			<p>Your path to a better future.</p>
-			<div class="container">
-				<img src="plantpic.png" id="center-picture"alt="neon tree img" class="blend-out" width="800" height="500">
-				
-				<div class="overlay">
-					<button class="go-button" " >Quiz</button>
+					<div id="contactInfo" class="new-popup-division">
+						<!-- <h2>Contacts</h2> -->
+						<div class="input-box">
+							<input required type="text" id="mobileNumber" class="input" name="mobileNumber"
+								placeholder=" " />
+							<div class="cut" style="width: 105px;"></div>
+							<label for="mobileNumber" class="placeholder">Mobile Number:</label>
+						</div>
+
+						<div class="input-box">
+							<input required type="text" id="email" class="input" name="email" placeholder=" " />
+							<div class="cut" style="width: 55px;"></div>
+							<label for="email" class="placeholder">Email:</label>
+						</div>
+					</div>
+					<div class="submit-box">
+						<button class="go-button2" type="submit">Submit</button>
+					</div>
+				</form>
+
+			</div>
+
+
+
+
+			<!-- HERO -->
+			<header class="center">
+				<h1 class="size-64 neon-text"> Carb<span id="flicker" class="flicker-letter">o</span>n Easy!</h1>
+				<p>Your path to a better future.</p>
+				<div class="container">
+					<img src="plantpic.png" id="center-picture" alt="neon tree img" class="blend-out" width="800"
+						height="500">
+
+					<div class="overlay">
+						<button class="go-button" " >Quiz</button>
 				</div>
 			</div>
 		</header>
