@@ -15,7 +15,7 @@
 	<script src="script.js"></script>
 </head>
 
-<body id="main-body" onload="loaded()" style="display: none;">
+<body id="main-body" onload="loaded()" style="display: none;" class="custom-background-colour">
 
 	<!-- Icon Bar  -->
 	<nav class="sidebar bar-block black-leaf-background">
@@ -35,9 +35,14 @@
 		<a href="#contact" class="bar-item button padding-large hover-black neon-text-small">
 			<p>CONTACT</p>
 		</a>
-		<a href="#register" class="bar-item button padding-large hover-black neon-text-small" id="trigger-modal"
-			onclick="triggerReg()"">
-			<p>REGISTER</p>
+
+		<a href="#login" id="login-button" class="bar-item button padding-large hover-black neon-text-small float-above-bottom">
+		<p>LOGIN</p>
+		</a>
+
+		<a href="#register" class="custom-colour bar-item button padding-large hover-black neon-text-small float-bottom" id="trigger-modal"
+			onclick="triggerReg()">
+			<p id="reg-text">REGISTER</p>
 		</a>
 	</nav>
 
@@ -48,7 +53,7 @@
 
 			<!-- popup -->
 			<div class="form-popup" id="form-ct">
-				<form>
+				<form onsubmit="submitRego()">
 					<h2 class="form-header">REGISTER</h2>
 					<span class="close-button" onclick="unTrigerReg()">&times;</span>
 					<div id="userInfo" class="new-popup-division">

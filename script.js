@@ -21,13 +21,19 @@ function loaded() {
 
 // for registration form
 var form_visible=false;
+var logged_in=false;
 
 function triggerReg() {
-    document.getElementById("form-ct").style.display = "block";
-    document.getElementById("center-picture").style.display = "none";
-    form_visible = true;
-    addEv();
+    if (logged_in) {
+        location.reload();
+    } else {
+        document.getElementById("form-ct").style.display = "block";
+        document.getElementById("center-picture").style.display = "none";
+        form_visible = true;
+        addEv();
+    }
 }
+
 
 function addEv(){
     console.log("add event listner");
@@ -41,11 +47,24 @@ function addEv(){
             unTrigerReg();
         }
     });
+    
 }
+
 
 function unTrigerReg() {
     document.getElementById("form-ct").style.display = "none";
     document.getElementById("center-picture").style.display = "block";
 
     form_visible=false;
+}
+
+
+function submitRego() {
+
+    console.log("submit rego");
+
+    document.getElementById("login-button").style.display = "none";
+    document.getElementById("reg-text").textContent = "Logout";
+    logged_in = true;
+    //! THIS DOESNT WORK AS PAGE SEEMS TO REFRESH HOWEVER IT IS NOT REQUIRED
 }
