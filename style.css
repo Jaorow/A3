@@ -61,6 +61,10 @@ body {
     text-shadow: 0px 10px 10px #00F934;
     animation: pulse 1s 2;
 }
+.button:focus{
+    text-shadow: 0px 10px 10px #00F934;
+    animation: pulse 1s 2;
+}
 
 @keyframes pulse {
     0% {
@@ -120,10 +124,12 @@ body {
     position: absolute;
     bottom: 30px;
 }
+
 .float-above-bottom{
     position: absolute;
     bottom: 100px;
 }
+
 .padding-large {
     padding: 12px 24px !important;
     display: flex;
@@ -205,23 +211,17 @@ body {
     0% {
         transform: scale(0);
     }
-    50% {
-        transform: scale(0.50);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes popout {
-    0% {
-        transform: scale(1);
+    25% {
+        transform: scale(0.25);
     }
     50% {
         transform: scale(0.50);
     }
+    75% {
+        transform: scale(0.75);
+    }
     100% {
-        transform: scale(0);
+        transform: scale(1);
     }
 }
 
@@ -366,6 +366,14 @@ body {
 }
 
 .go-button2:hover {
+    color: black;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.go-button2:focus {
     color: black;
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
